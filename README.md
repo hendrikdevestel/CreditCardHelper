@@ -1,4 +1,6 @@
-# CreditCardHelper
+# CreditCardHelper 
+
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/hendrikdevestel/CreditCardHelper/.NET Core)
 
 CreditCardHelper helps you working with creditcards. Validating the numbers and find the type of card. Verifying card numbers through the Luhn algorithm. It even can check whether there is a number hidden in text.
 
