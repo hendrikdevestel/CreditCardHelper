@@ -6,7 +6,7 @@
     <Authors>Devestel</Authors>
     <Company>Devestel</Company>
     <Description>General helper to validate creditcard numbers and detect hidden numbers in text.</Description>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://devestel.com</PackageProjectUrl>
     <RepositoryUrl>https://github.com/hendrikdevestel/CreditCardHelper</RepositoryUrl>
