@@ -5,7 +5,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Devestel</Authors>
     <Company>Devestel</Company>
-    <Description>General helper to validate creditcard numbers and detect hidden numbers in text in .NET Core</Description>
+    <Description>General helper to validate creditcard numbers and detect hidden numbers in text.</Description>
     <Version>1.0.2</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://devestel.com</PackageProjectUrl>
