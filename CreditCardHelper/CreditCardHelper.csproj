@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
+    <Authors>Devestel</Authors>
+    <Company>Devestel</Company>
+    <Description>General helper to validate creditcard numbers and detect hidden numbers in text in .NET Core</Description>
+    <PackageProjectUrl>https://devestel.com</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/hendrikdevestel/CreditCardHelper</RepositoryUrl>
+    <PackageTags>CreditCard, Credit, Card, Validator</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+</Project>
