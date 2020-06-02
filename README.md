@@ -6,9 +6,6 @@ Nuget Package: https://www.nuget.org/packages/CreditCardHelper
 
 ## Usage
 
-#### LuhnValidator
-
-
 #### ValidateCreditCard
 ```csharp
 var cardType = CreditCardHelper.CardType.GetCardTypeByNumber("5105105105105100");
