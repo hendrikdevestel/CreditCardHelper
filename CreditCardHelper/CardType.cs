@@ -1,9 +1,8 @@
-﻿using CreditCardHelper.Enums;
-using System;
+﻿using System;
 
 namespace CreditCardHelper
 {
-    public static class ValidateCreditCard
+    public static class CardType
     {
         /// <summary>
         /// Gets the type of a creditcard by its number

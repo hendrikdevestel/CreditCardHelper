@@ -50,7 +50,7 @@ namespace CreditCardHelper.Tests
         public void Validate_ReturnsValue(string input, bool expectedValue)
         {
             //Act
-            var result = LuhnValidator.Validate(input);
+            var result = Validator.ValidateLuhn(input);
 
             //Assert
             Assert.That(result, Is.EqualTo(expectedValue));

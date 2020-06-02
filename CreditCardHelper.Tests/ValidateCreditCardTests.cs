@@ -1,4 +1,3 @@
-using CreditCardHelper.Enums;
 using NUnit.Framework;
 
 namespace CreditCardHelper.Tests
@@ -32,7 +31,7 @@ namespace CreditCardHelper.Tests
         public void GetCardTypeByNumber_ReturnsValue(string input, CreditCardType expectedValue)
         {
             //Act
-            var result = ValidateCreditCard.GetCardTypeByNumber(input);
+            var result = CardType.GetCardTypeByNumber(input);
 
             //Assert
             Assert.That(result, Is.EqualTo(expectedValue));
