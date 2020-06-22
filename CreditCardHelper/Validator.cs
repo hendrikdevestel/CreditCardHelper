@@ -26,10 +26,15 @@ namespace CreditCardHelper
             foreach (var validLength in _cardLengths.Where(m => m <= input.Length))
             {
                 var extraNumbers = input.Length - validLength;
-                for(var i = 0; i <= extraNumbers; i++)
+                for (var i = 0; i <= extraNumbers; i++)
                 {
                     var textToTest = input.Substring(i, validLength);
-                    if (ValidateLuhn(textToTest))
+                    if (!ValidateLuhn(textToTest))
+                    {
+                        continue;
+                    }
+                    var cardType = CardType.GetCardTypeByNumber(textToTest);
+                    if(LengthIsValidateWithType(validLength, cardType))
                     {
                         return true;
                     }
@@ -77,5 +82,60 @@ namespace CreditCardHelper
                 }
             }
         }
+
+        private static bool LengthIsValidateWithType(int length, CreditCardType cardType)
+        {
+            switch (length)
+            {
+                case 12:
+                    return cardType == CreditCardType.Maestro;
+                case 13:
+                    return cardType == CreditCardType.Maestro;
+                case 14:
+                    return cardType == CreditCardType.DinersClub
+                        || cardType == CreditCardType.Maestro;
+                case 15:
+                    return cardType == CreditCardType.AmericanExpress
+                        || cardType == CreditCardType.Maestro
+                        || cardType == CreditCardType.DinersClub;
+                case 16:
+                    return cardType == CreditCardType.ChinaUnionPay
+                        || cardType == CreditCardType.DinersClub
+                        || cardType == CreditCardType.DiscoverCard
+                        || cardType == CreditCardType.UkrCard
+                        || cardType == CreditCardType.RuPay
+                        || cardType == CreditCardType.InterPayment
+                        || cardType == CreditCardType.InstaPayment
+                        || cardType == CreditCardType.JCB
+                        || cardType == CreditCardType.Maestro
+                        || cardType == CreditCardType.Dankort
+                        || cardType == CreditCardType.MIR
+                        || cardType == CreditCardType.NPSPridnestrovie
+                        || cardType == CreditCardType.MasterCard
+                        || cardType == CreditCardType.Troy
+                        || cardType == CreditCardType.Visa
+                        || cardType == CreditCardType.Verve
+                        || cardType == CreditCardType.LankaPay;
+                case 17:
+                case 18:
+                    return cardType == CreditCardType.ChinaUnionPay
+                        || cardType == CreditCardType.DinersClub
+                        || cardType == CreditCardType.DiscoverCard
+                        || cardType == CreditCardType.InterPayment
+                        || cardType == CreditCardType.JCB
+                        || cardType == CreditCardType.Maestro;
+                case 19:
+                    return cardType == CreditCardType.ChinaTUnion
+                        || cardType == CreditCardType.ChinaUnionPay
+                        || cardType == CreditCardType.DinersClub
+                        || cardType == CreditCardType.DiscoverCard
+                        || cardType == CreditCardType.InterPayment
+                        || cardType == CreditCardType.JCB
+                        || cardType == CreditCardType.Maestro
+                        || cardType == CreditCardType.Verve;
+            }
+            return false;
         }
     }
+
+}
