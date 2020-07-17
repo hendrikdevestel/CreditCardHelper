@@ -17,6 +17,10 @@ namespace CreditCardHelper
         /// <returns>Whether the text contains a (hidden) credit card number.</returns>
         public static bool TextContainsCreditCard(string input)
         {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                return false;
+            }
             input = input.GetOnlyNumericValues();
             if (input.Length < _cardLengths.Min())
             {
@@ -96,7 +100,7 @@ namespace CreditCardHelper
                         || cardType == CreditCardType.Maestro;
                 case 15:
                     return cardType == CreditCardType.AmericanExpress
-                        || cardType == CreditCardType.Maestro
+                        //|| cardType == CreditCardType.Maestro
                         || cardType == CreditCardType.DinersClub;
                 case 16:
                     return cardType == CreditCardType.ChinaUnionPay
