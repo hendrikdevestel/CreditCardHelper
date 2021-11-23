@@ -1,4 +1,4 @@
-# CreditCardHelper ![.NET Core](https://github.com/hendrikdevestel/CreditCardHelper/workflows/.NET%205/badge.svg) ![.NET Core](https://github.com/hendrikdevestel/CreditCardHelper/workflows/.NET%20Core/badge.svg)
+# CreditCardHelper ![.NET Core](https://github.com/hendrikdevestel/CreditCardHelper/workflows/.NET%205/badge.svg)
 
 CreditCardHelper helps you working with credit cards. Validating the numbers and find the type of card. Verifying card numbers through the Luhn algorithm. It even can check whether there is a number hidden in text.
 
