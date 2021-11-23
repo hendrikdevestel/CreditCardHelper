@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreditCardHelper.Tests", "CreditCardHelper.Tests\CreditCardHelper.Tests.csproj", "{B4D5EBC8-8533-468D-993F-5047FE7C178F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreditCardHelper", "CreditCardHelper\CreditCardHelper.csproj", "{952F13E2-6699-46A7-B70D-875F6E4E6A61}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreditCardHelper", "CreditCardHelper\CreditCardHelper.csproj", "{BD934BB1-591F-465B-B7CA-CD2199322E59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{B4D5EBC8-8533-468D-993F-5047FE7C178F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4D5EBC8-8533-468D-993F-5047FE7C178F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4D5EBC8-8533-468D-993F-5047FE7C178F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{952F13E2-6699-46A7-B70D-875F6E4E6A61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{952F13E2-6699-46A7-B70D-875F6E4E6A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{952F13E2-6699-46A7-B70D-875F6E4E6A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{952F13E2-6699-46A7-B70D-875F6E4E6A61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD934BB1-591F-465B-B7CA-CD2199322E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD934BB1-591F-465B-B7CA-CD2199322E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD934BB1-591F-465B-B7CA-CD2199322E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD934BB1-591F-465B-B7CA-CD2199322E59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
