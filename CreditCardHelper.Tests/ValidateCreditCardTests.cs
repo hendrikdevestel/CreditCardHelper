@@ -1,3 +1,4 @@
+using CreditCardHelper.Enums;
 using NUnit.Framework;
 
 namespace CreditCardHelper.Tests

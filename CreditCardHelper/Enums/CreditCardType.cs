@@ -1,4 +1,4 @@
-﻿namespace CreditCardHelper
+﻿namespace CreditCardHelper.Enums
 {
     public enum CreditCardType
     {

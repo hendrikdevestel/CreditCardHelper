@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CreditCardHelper.Enums;
+using CreditCardHelper.Extensions;
 using System.Linq;
 
 namespace CreditCardHelper

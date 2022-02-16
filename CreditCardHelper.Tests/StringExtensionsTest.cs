@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using System;
+using CreditCardHelper.Extensions;
 
 namespace CreditCardHelper.Tests
 {
