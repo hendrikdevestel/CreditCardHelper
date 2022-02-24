@@ -2,7 +2,7 @@ name: Nuget CreditCardHelper
 on:
   push:
     branches:
-    - main
+    - master
 jobs:
   publish-nuget:
     runs-on: ubuntu-latest
