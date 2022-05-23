@@ -1,0 +1,49 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<style>
+    .result {
+    }
+
+    #textContainsCard {
+        font-weight: bold;
+        display: block;
+    }
+
+    .card-found {
+        color: green;
+    }
+
+    .no-card-found {
+        color: red;
+    }
+
+    #matchingCardNumber {
+        font-style: italic;
+        display: block;
+    }
+</style>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p class="align-center">In this demo, you will be able to test the credit card helper functionality of finding a possible credit card number in a text.</p>
+    <div>
+        <form method="post">
+
+            <input type="text" class="form-control"  asp-for="Text"  style="margin-bottom:10px;" />
+            <input type="submit" class="btn btn-success" value="Check validation" />
+        </form>
+    </div>
+    @if (!string.IsNullOrWhiteSpace(Model.Text))
+    {
+
+        <div class="result">
+            <span id="textContainsCard" class="@(Model.CreditCardFound ? "card-found": "no-card-found")">@(Model.CreditCardFound ? "Credit card spotted!": "There is no credit card hidden in the text")</span>
+            @if (Model.CreditCardFound)
+            {
+                <span id="matchingCardNumber">The card number that is found: <strong>@Model.MatchingText</strong></span>
+            }
+        </div>
+    }
+</div>
