@@ -12,20 +12,30 @@ namespace CreditCardHelper
         private static int[] _cardLengths = new int[] { 12, 14, 15, 16, 18, 19 };
 
         /// <summary>
-        /// Find all hidden creditcard numbers in a text.
+        /// Check if there is a credit card number hidden in a text.
         /// </summary>
         /// <param name="input">Text where a potentional creditcard number could be in</param>
         /// <returns>Whether the text contains a (hidden) credit card number.</returns>
         public static bool TextContainsCreditCard(string input)
         {
+            return !string.IsNullOrWhiteSpace(GetCardNumberFromText(input));
+        }
+
+        /// <summary>
+        /// Try to find a credit card number in a text
+        /// </summary>
+        /// <param name="input">Text where a potentional creditcard number could be in</param>
+        /// <returns>The credit card number that is found or null if there is no number found.</returns>
+        public static string GetCardNumberFromText(string input)
+        {
             if (string.IsNullOrWhiteSpace(input))
             {
-                return false;
+                return null;
             }
             input = input.GetOnlyNumericValues();
             if (input.Length < _cardLengths.Min())
             {
-                return false;
+                return null;
             }
 
             foreach (var validLength in _cardLengths.Where(m => m <= input.Length))
@@ -39,13 +49,13 @@ namespace CreditCardHelper
                         continue;
                     }
                     var cardType = CardType.GetCardTypeByNumber(textToTest);
-                    if(LengthIsValidateWithType(validLength, cardType))
+                    if (LengthIsValidateWithType(validLength, cardType))
                     {
-                        return true;
+                        return textToTest;
                     }
                 }
             }
-            return false;
+            return null;
         }
 
         /// <summary>
