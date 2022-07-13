@@ -16,9 +16,9 @@ namespace CreditCardHelper
         /// </summary>
         /// <param name="input">Text where a potentional creditcard number could be in</param>
         /// <returns>Whether the text contains a (hidden) credit card number.</returns>
-        public static bool TextContainsCreditCard(string input)
+        public static bool TextContainsCreditCard(string input, int maxCharactersBetweenNumbers = int.MaxValue)
         {
-            return !string.IsNullOrWhiteSpace(GetCardNumberFromText(input));
+            return !string.IsNullOrWhiteSpace(GetCardNumberFromText(input, maxCharactersBetweenNumbers));
         }
 
         /// <summary>
@@ -26,35 +26,39 @@ namespace CreditCardHelper
         /// </summary>
         /// <param name="input">Text where a potentional creditcard number could be in</param>
         /// <returns>The credit card number that is found or null if there is no number found.</returns>
-        public static string GetCardNumberFromText(string input)
+        public static string GetCardNumberFromText(string input, int maxCharactersBetweenNumbers = int.MaxValue)
         {
             if (string.IsNullOrWhiteSpace(input))
             {
                 return null;
             }
-            input = input.GetOnlyNumericValues();
-            if (input.Length < _cardLengths.Min())
+            var allPossibleInputs = input.GetOnlyNumericValues(maxCharactersBetweenNumbers);
+            if (allPossibleInputs.All(m => m.Length < _cardLengths.Min()))
             {
                 return null;
             }
-
-            foreach (var validLength in _cardLengths.Where(m => m <= input.Length))
+            foreach (var inputToCheck in allPossibleInputs)
             {
-                var extraNumbers = input.Length - validLength;
-                for (var i = 0; i <= extraNumbers; i++)
+
+                foreach (var validLength in _cardLengths.Where(m => m <= inputToCheck.Length))
                 {
-                    var textToTest = input.Substring(i, validLength);
-                    if (!ValidateLuhn(textToTest))
+                    var extraNumbers = inputToCheck.Length - validLength;
+                    for (var i = 0; i <= extraNumbers; i++)
                     {
-                        continue;
-                    }
-                    var cardType = CardType.GetCardTypeByNumber(textToTest);
-                    if (LengthIsValidateWithType(validLength, cardType))
-                    {
-                        return textToTest;
+                        var textToTest = inputToCheck.Substring(i, validLength);
+                        if (!ValidateLuhn(textToTest))
+                        {
+                            continue;
+                        }
+                        var cardType = CardType.GetCardTypeByNumber(textToTest);
+                        if (LengthIsValidateWithType(validLength, cardType))
+                        {
+                            return textToTest;
+                        }
                     }
                 }
             }
+
             return null;
         }
 

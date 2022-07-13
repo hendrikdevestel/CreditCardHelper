@@ -12,17 +12,21 @@ namespace CreditCardHelper
         /// <returns>Member of the enum CardType</returns>
         public static CreditCardType GetCardTypeByNumber(string cardNumber)
         {
-            cardNumber = cardNumber.GetOnlyNumericValues();
+            var possibleCardNumbers = cardNumber.GetOnlyNumericValues();
             var cardType = CreditCardType.Unknown;
-            if (cardNumber.Length >= 12 && cardNumber.Length <= 19)
+            foreach (var possibleValue in possibleCardNumbers)
             {
-                for(var i = 7; i > 0; i--)
+                if (possibleValue.Length >= 12 && possibleValue.Length <= 19)
                 {
-                    cardType = GetByIINRange(cardNumber, i);
-                    if(cardType != CreditCardType.Unknown)
+                    for (var i = 7; i > 0; i--)
                     {
-                        return cardType;
+                        cardType = GetByIINRange(possibleValue, i);
+                        if (cardType != CreditCardType.Unknown)
+                        {
+                            return cardType;
+                        }
                     }
+
                 }
             }
 

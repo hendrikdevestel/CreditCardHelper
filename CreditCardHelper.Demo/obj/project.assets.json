@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "CreditCardHelper/1.1.5": {
+      "CreditCardHelper/1.1.6": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
@@ -15,7 +15,7 @@
     }
   },
   "libraries": {
-    "CreditCardHelper/1.1.5": {
+    "CreditCardHelper/1.1.6": {
       "type": "project",
       "path": "../CreditCardHelper/CreditCardHelper.csproj",
       "msbuildProject": "../CreditCardHelper/CreditCardHelper.csproj"
@@ -23,7 +23,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "CreditCardHelper >= 1.1.5"
+      "CreditCardHelper >= 1.1.6"
     ]
   },
   "packageFolders": {

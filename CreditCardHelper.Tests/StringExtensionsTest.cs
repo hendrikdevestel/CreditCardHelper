@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using CreditCardHelper.Extensions;
+using System.Linq;
 
 namespace CreditCardHelper.Tests
 {
@@ -12,17 +13,17 @@ namespace CreditCardHelper.Tests
         [TestCase("test123", "123")]
         [TestCase("1t2e3s4t5", "12345")]
         [TestCase("1t2e3s4t5", "12345")]
-        [TestCase("", "")]
+        [TestCase("", null)]
         [TestCase("12", "12")]
         [TestCase("<t3est>", "3")]
         [TestCase("\"'§^5[2]\\3>", "523")]
         public void GetOnlyNumericValues_ReturnsValue(string input, string expectedValue)
         {
             //Act
-            var result = input.GetOnlyNumericValues();
+            var results = input.GetOnlyNumericValues();
 
             //Assert
-            Assert.That(result, Is.EqualTo(expectedValue));
+            Assert.That(results.FirstOrDefault(), Is.EqualTo(expectedValue));
         }
     }
 }

@@ -8,13 +8,13 @@
     ".NETCoreApp,Version=v6.0": {
       "CreditCardHelper.Demo/1.0.0": {
         "dependencies": {
-          "CreditCardHelper": "1.1.4"
+          "CreditCardHelper": "1.1.5"
         },
         "runtime": {
           "CreditCardHelper.Demo.dll": {}
         }
       },
-      "CreditCardHelper/1.1.4": {
+      "CreditCardHelper/1.1.5": {
         "runtime": {
           "CreditCardHelper.dll": {}
         }
@@ -27,7 +27,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "CreditCardHelper/1.1.4": {
+    "CreditCardHelper/1.1.5": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
