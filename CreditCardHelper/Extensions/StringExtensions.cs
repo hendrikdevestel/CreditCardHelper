@@ -9,7 +9,19 @@ namespace CreditCardHelper.Extensions
         /// </summary>
         /// <param name="input">The string to update.</param>
         /// <returns>The updated string.</returns>
-        public static IEnumerable<string> GetOnlyNumericValues(this string input, int maxCharactersBetweenNumbers = int.MaxValue)
+        public static string GetOnlyNumericValues(this string input)
+        {
+            var ret = new System.Text.StringBuilder();
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (char.IsDigit(input, i))
+                {
+                    ret.Append(input.Substring(i, 1));
+                }
+            }
+            return ret.ToString();
+        }
+        public static IEnumerable<string> GetOnlyNumericValues(this string input, int maxCharactersBetweenNumbers)
         {
             var outputList = new List<string>();
             var sBuilder = new System.Text.StringBuilder();
@@ -28,8 +40,9 @@ namespace CreditCardHelper.Extensions
                         if (!string.IsNullOrWhiteSpace(number))
                             outputList.Add(number);
                         sBuilder = new System.Text.StringBuilder();
-                        charactersBetweenNumbers = 0;
+                        sBuilder.Append(input.Substring(i, 1));
                     }
+                    charactersBetweenNumbers = 0;
                 }
                 else
                 {
