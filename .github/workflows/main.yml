@@ -2,23 +2,30 @@ name: Nuget CreditCardHelper
 on:
   push:
     branches:
-    - master
+      - master
 jobs:
   publish-nuget:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-    - name: Install dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build — configuration Release — no-restore
-    - name: Publish to NuGet
-      uses: brandedoutcast/publish-nuget@v2.5.5
-      with:
-        PROJECT_FILE_PATH: CreditCardHelper/CreditCardHelper.csproj
-        PACKAGE_NAME: IbanHelper
-        VERSION_REGEX: ‘^\s*<Version>(.*)<\/Version>\s*$’
-        TAG_FORMAT: ‘*’
-        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Publish to NuGet
+        uses: brandedoutcast/publish-nuget@v2.5.5
+        with:
+          PROJECT_FILE_PATH: CreditCardHelper/CreditCardHelper.csproj
+          PACKAGE_NAME: CreditCardHelper
+          VERSION_REGEX: '^\\s*<Version>(.*)<\\/Version>\\s*$'
+          TAG_FORMAT: '*'
+          NUGET_KEY: ${{ secrets.NUGET_API_KEY }}

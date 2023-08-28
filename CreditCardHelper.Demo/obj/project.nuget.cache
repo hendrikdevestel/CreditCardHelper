@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/k7QcJVn0d4zRbTv/cJmbuR7wcRybQyjEcAgtaiKmvVPd1AfVEVa09XLA6r2XzxhcLVQF6xHQkEtmuKhrARG1A==",
+  "dgSpecHash": "2owksgCaT/7iZwZM8N2wKROv06SRIZ4hgsAs8auQ09b9qE1mFV4zyrBUiCG+3N9U7nVpmdboMHL9vhpUCS73gg==",
   "success": true,
-  "projectFilePath": "C:\\wamp64\\www\\CreditCardHelper\\CreditCardHelper.Demo\\CreditCardHelper.Demo.csproj",
+  "projectFilePath": "C:\\Users\\hendr\\projects\\CreditCardHelper\\CreditCardHelper.Demo\\CreditCardHelper.Demo.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
