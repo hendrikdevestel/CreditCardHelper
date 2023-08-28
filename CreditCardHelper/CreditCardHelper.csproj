@@ -1,18 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.1.6</Version>
-    <Authors>Devestel</Authors>
-    <Company>Devestel</Company>
-    <Copyright></Copyright>
-    <RepositoryUrl>https://github.com/hendrikdevestel/CreditCardHelper</RepositoryUrl>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Description>A simple helper to check a creditcard number and to find a hidden card in a text.</Description>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/hendrikdevestel/CreditCardHelper</PackageProjectUrl>
-    <PackageTags>CreditCard Credit Card Validator Luhn</PackageTags>
-    <PackageReleaseNotes>Change the project from .NET Framework to .NET Standard 2.0</PackageReleaseNotes>
-  </PropertyGroup>
-
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<Version>1.1.6</Version>
+		<Authors>Devestel</Authors>
+		<Company>Devestel</Company>
+		<Copyright></Copyright>
+		<RepositoryUrl>https://github.com/hendrikdevestel/CreditCardHelper</RepositoryUrl>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Description>A simple helper to check a creditcard number and to find a hidden card in a text.</Description>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/hendrikdevestel/CreditCardHelper</PackageProjectUrl>
+		<PackageTags>CreditCard Credit Card Validator Luhn</PackageTags>
+		<PackageReleaseNotes>Change the project from .NET Framework to .NET Standard 2.0</PackageReleaseNotes>
+		<Version>1.1.6</Version>
+	</PropertyGroup>
 </Project>
