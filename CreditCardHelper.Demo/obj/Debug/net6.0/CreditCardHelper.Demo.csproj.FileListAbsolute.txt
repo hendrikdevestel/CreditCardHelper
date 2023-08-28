@@ -7,7 +7,6 @@ C:\Users\hendr\projects\CreditCardHelper\CreditCardHelper.Demo\bin\Debug\net6.0\
 C:\Users\hendr\projects\CreditCardHelper\CreditCardHelper.Demo\bin\Debug\net6.0\CreditCardHelper.Demo.dll
 C:\Users\hendr\projects\CreditCardHelper\CreditCardHelper.Demo\bin\Debug\net6.0\CreditCardHelper.Demo.pdb
 C:\Users\hendr\projects\CreditCardHelper\CreditCardHelper.Demo\bin\Debug\net6.0\CreditCardHelper.dll
-C:\Users\hendr\projects\CreditCardHelper\CreditCardHelper.Demo\bin\Debug\net6.0\CreditCardHelper.pdb
 C:\Users\hendr\projects\CreditCardHelper\CreditCardHelper.Demo\obj\Debug\net6.0\CreditCardHelper.Demo.csproj.AssemblyReference.cache
 C:\Users\hendr\projects\CreditCardHelper\CreditCardHelper.Demo\obj\Debug\net6.0\CreditCardHelper.Demo.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\hendr\projects\CreditCardHelper\CreditCardHelper.Demo\obj\Debug\net6.0\CreditCardHelper.Demo.AssemblyInfoInputs.cache

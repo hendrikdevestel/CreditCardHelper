@@ -16,7 +16,10 @@
       },
       "CreditCardHelper/1.1.6": {
         "runtime": {
-          "CreditCardHelper.dll": {}
+          "lib/netstandard2.0/CreditCardHelper.dll": {
+            "assemblyVersion": "1.1.6.0",
+            "fileVersion": "1.1.6.0"
+          }
         }
       }
     }
@@ -28,9 +31,11 @@
       "sha512": ""
     },
     "CreditCardHelper/1.1.6": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Kh7JtvYH7/YkuxiSdRaD3aw0cNNWXXvZ7MKAFylCscagXmsveyZMjp/iy3KnQyQ2T8fAwHPebWRHGP/NvChMBw==",
+      "path": "creditcardhelper/1.1.6",
+      "hashPath": "creditcardhelper.1.1.6.nupkg.sha512"
     }
   }
 }

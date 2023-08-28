@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "2owksgCaT/7iZwZM8N2wKROv06SRIZ4hgsAs8auQ09b9qE1mFV4zyrBUiCG+3N9U7nVpmdboMHL9vhpUCS73gg==",
+  "dgSpecHash": "qXLlRSh2PfBWf3lS4g+Qdj6CUh1xnT96/KvTimlCImNP5SrenLbSHZvTYYo455V/7B4D+6zPOcTGwRwcIDd3fA==",
   "success": true,
   "projectFilePath": "C:\\Users\\hendr\\projects\\CreditCardHelper\\CreditCardHelper.Demo\\CreditCardHelper.Demo.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\hendr\\.nuget\\packages\\creditcardhelper\\1.1.6\\creditcardhelper.1.1.6.nupkg.sha512"
+  ],
   "logs": []
 }

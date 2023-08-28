@@ -3,22 +3,28 @@
   "targets": {
     "net6.0": {
       "CreditCardHelper/1.1.6": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
+        "type": "package",
         "compile": {
-          "bin/placeholder/CreditCardHelper.dll": {}
+          "lib/netstandard2.0/CreditCardHelper.dll": {}
         },
         "runtime": {
-          "bin/placeholder/CreditCardHelper.dll": {}
+          "lib/netstandard2.0/CreditCardHelper.dll": {}
         }
       }
     }
   },
   "libraries": {
     "CreditCardHelper/1.1.6": {
-      "type": "project",
-      "path": "../CreditCardHelper/CreditCardHelper.csproj",
-      "msbuildProject": "../CreditCardHelper/CreditCardHelper.csproj"
+      "sha512": "Kh7JtvYH7/YkuxiSdRaD3aw0cNNWXXvZ7MKAFylCscagXmsveyZMjp/iy3KnQyQ2T8fAwHPebWRHGP/NvChMBw==",
+      "type": "package",
+      "path": "creditcardhelper/1.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "creditcardhelper.1.1.6.nupkg.sha512",
+        "creditcardhelper.nuspec",
+        "lib/netstandard2.0/CreditCardHelper.dll"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -53,11 +59,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "C:\\Users\\hendr\\projects\\CreditCardHelper\\CreditCardHelper\\CreditCardHelper.csproj": {
-              "projectPath": "C:\\Users\\hendr\\projects\\CreditCardHelper\\CreditCardHelper\\CreditCardHelper.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -69,6 +71,12 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "CreditCardHelper": {
+            "target": "Package",
+            "version": "[1.1.6, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
